@@ -1,39 +1,48 @@
 import React from 'react'
+import { useState } from "react"
 import { assets } from "../../assets/assets"
 import "./Sidebar.css"
 
 const Sidebar = () => {
+
+   const [extended, setExtended] = useState(false)
+   
   return (
     <>
-      <div className="sidebar">
+      <div className={extended?"sidebar":"sidebar2"}>
          <div className="top">
-            <div className="menu-div">
+            <div className="menu-div" onClick={(() => setExtended(prev => !prev))}>
                <img className='menu' src={assets.menu_icon} draggable={false} alt="" />
             </div>
             <div className="new-chat">
-               <i class="ri-add-large-line add-icon"></i>
-               <p>New Chat</p>
+               <i className="ri-add-large-line add-icon"></i>
+               {extended?<p>New Chat</p>:null}
             </div>
-            <div className="recent">
+
+            {extended
+             ?<div className="recent">
                <p className="recent-title">Recent</p>
                <div className="recent-entry">
-               <i class="ri-chat-2-line"></i>
+                  <i className="ri-chat-2-line chat-icon"></i>
                   <p>What is react ...</p>
                </div>
-            </div>
+              </div>
+             :null
+            }
+
          </div>
          <div className="bottom">
-            <div className="bottom-item recent-entry">
+            <div className={extended?"bottom-item recent-entry":"bottom-item recent-entry"}>
                <img src={assets.question_icon} draggable={false} alt="" />
-               <p>Help</p>
+               {extended?<p>Help</p>:null}
             </div>
-            <div className="bottom-item recent-entry">
+            <div className={extended?"bottom-item recent-entry":"bottom-item recent-entry"}>
                <img src={assets.history_icon} draggable={false} alt="" />
-               <p>Activity</p>
+               {extended?<p>Activity</p>:null}
             </div>
-            <div className="bottom-item recent-entry">
+            <div className={extended?"bottom-item recent-entry":"bottom-item recent-entry"}>
                <img src={assets.setting_icon} draggable={false} alt="" />
-               <p>Settings</p>
+               {extended?<p>Settings</p>:null}
             </div>
          </div>
       </div>

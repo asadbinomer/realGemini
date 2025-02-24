@@ -5,7 +5,16 @@
    flex-direction: column;
    justify-content: space-between;
    background-color: #f0f4f9;
-   padding: 25px 15px;
+   padding: 20px 15px;
+}
+
+.sidebar2{
+   min-height: 100vh;
+   display: inline-flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: #f0f4f9;
+   padding: 20px 15px;
 }
 
 .menu-div{
@@ -16,37 +25,39 @@
    justify-content: center;
    border-radius: 50px;
    transition: 0.3s;
+   cursor: pointer;
 }
 
 .menu-div:hover{
    background-color: #e6eaf1;
 }
 
-.sidebar img{
+img{
   width: 20px;
+  user-select: none;
 }
 
-.sidebar .menu{
+.menu{
   display: block;
   cursor: pointer;
 }
 
-.sidebar .new-chat {
+.new-chat {
    width: fit-content;
-   padding: 10px 17px;
+   padding: 10px 15px;
    display: flex;
    align-items: center;
    gap: 10px;
    font-size: 15px;
    color: grey;
    transition: 0.3s;
-   margin-top: 50px;
+   margin-top: 40px;
    border-radius: 50px;
    background-color: #e6eaf1;
    cursor: pointer;   
 }
 
-.sidebar .new-chat:hover{
+.new-chat:hover{
    background-color: #dde2eb;
 }
 
@@ -54,38 +65,73 @@
    font-size: 21px;
 }
 
-.sidebar .recent{
+.recent{
    display: flex;
    flex-direction: column;
 }
 
-.sidebar .recent-title{
+.recent-title{
    margin-top: 30px;
    margin-bottom: 20px;
 }
 
-.sidebar .recent-entry{
-   display: flex;
-   align-items: start;
-   gap: 10px;
+.recent-entry{
    padding: 10px;
+   padding-left: 16px;
    padding-right: 40px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
    color: #282828;
    cursor: pointer;
    border-radius: 50px;
    transition: 0.3s;
 }
 
-.sidebar .recent-entry:hover{
+.recent-entry:hover{
    background-color: #e2e6eb;
 }
 
-.sidebar .bottom{
+.recent-entry2{
+   padding: 10px;
+   padding-right: 40px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   color: #282828;
+   cursor: pointer;
+   border-radius: 50px;
+   transition: 0.3s;
+}
+
+.recent-entry2:hover{
+   background-color: #e2e6eb;
+}
+
+.bottom{
    display: flex;
    flex-direction: column;
 }
 
-.sidebar .bottom-item{
+.bottom2{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.bottom-item{
    padding-right: 10px;
    cursor: pointer;
+}
+
+.bottom-item2{
+   width: fit-content;
+   padding-right: 10px;
+   cursor: pointer;
+}
+
+.chat-icon{
+   margin-top: 2px;
+   font-size: 18px;
+   color: #636363;
 }
