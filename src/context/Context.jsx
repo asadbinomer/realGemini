@@ -13,7 +13,6 @@ const ContextProvider = (props) => {
   
 
     const contextValue = {
-
     }
 
     return (
